@@ -1,0 +1,2 @@
+rootProject.name='Kerjo_RPLGDC'
+include ':app'

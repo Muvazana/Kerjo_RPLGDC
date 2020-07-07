@@ -1,7 +1,8 @@
-package com.example.kerjo_rplgdc
+package com.example.kerjo_rplgdc.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kerjo_rplgdc.R
 
 class LoginActivity : AppCompatActivity() {
 

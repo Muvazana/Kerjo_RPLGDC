@@ -1,10 +1,12 @@
-package com.example.kerjo_rplgdc
+package com.example.kerjo_rplgdc.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kerjo_rplgdc.LoginActivity
+import com.example.kerjo_rplgdc.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,14 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 //        window.requestFeature(Window.FEATURE_NO_TITLE)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
 
-        Handler().postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }, 1500)
     }
 }

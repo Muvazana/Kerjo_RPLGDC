@@ -17,6 +17,7 @@ class RegisActivity : AppCompatActivity() {
         btnRegister.setOnClickListener {
             if (!ValidateEmail() || !ValidatePassword()) {
                 return@setOnClickListener
+                //TODO Create Process Registration
             }
         }
     }

@@ -19,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             if (!ValidateEmail() || !ValidatePassword()) {
                 return@setOnClickListener
+                //TODO Create Process Login
             }
         }
 

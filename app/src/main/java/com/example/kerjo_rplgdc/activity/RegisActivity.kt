@@ -4,7 +4,9 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.kerjo_rplgdc.R
 import kotlinx.android.synthetic.main.activity_regis.*
 
@@ -137,5 +139,15 @@ class RegisActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    fun onRadioButtonChecked(view: View) {
+        if (rbReqruiter.isChecked) {
+            rbReqruiter.setTextColor(ContextCompat.getColor(this, R.color.colorWhite))
+            rbSeeker.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
+        } else {
+            rbReqruiter.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
+            rbSeeker.setTextColor(ContextCompat.getColor(this, R.color.colorWhite))
+        }
     }
 }

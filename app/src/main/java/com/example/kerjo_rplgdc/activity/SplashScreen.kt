@@ -1,24 +1,25 @@
-package com.example.kerjo_rplgdc
+package com.example.kerjo_rplgdc.activity
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
+import com.example.kerjo_rplgdc.R
 
-class MainActivity : AppCompatActivity() {
+class SplashScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//        window.requestFeature(Window.FEATURE_NO_TITLE)
+        setContentView(R.layout.activity_splash_screen)
+
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
         Handler().postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 1500)
     }

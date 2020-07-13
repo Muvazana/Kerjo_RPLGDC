@@ -1,10 +1,10 @@
 package com.example.kerjo_rplgdc.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import com.example.kerjo_rplgdc.R
 
 class SplashScreen : AppCompatActivity() {
@@ -19,7 +19,7 @@ class SplashScreen : AppCompatActivity() {
         )
 
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, 1500)
     }

@@ -29,9 +29,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        carouselView.pageCount = images.size
-
         carouselView.setImageListener(imageListener)
+
+        carouselView.pageCount = images.size
     }
 
     val imageListener = ImageListener { position, imageView -> imageView?.setImageResource(images[position]) }

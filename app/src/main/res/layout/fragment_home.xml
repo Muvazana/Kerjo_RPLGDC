@@ -3,43 +3,231 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.HomeFragment"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".fragment.HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:layout_height="match_parent">
 
         <EditText
             android:id="@+id/search_bar"
             android:layout_width="300dp"
-            android:layout_height="50dp"
-            app:layout_constraintEnd_toStartOf="@id/filter"
+            android:layout_height="40dp"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:background="@drawable/background_search_bar"
             android:hint="Search your dream job"
             android:inputType="text"
-            app:layout_constraintTop_toTopOf="parent"
-            android:padding="@dimen/activity_vertical_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingBottom="8dp"
             android:textColor="@android:color/darker_gray"
             android:textCursorDrawable="@drawable/color_cursor"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="@id/filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/filter"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_filter"
+            app:layout_constraintBottom_toBottomOf="@id/search_bar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/search_bar"
-            app:layout_constraintTop_toTopOf="@id/search_bar"
-            android:src="@drawable/ic_filter"
-            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@id/search_bar" />
+
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            app:layout_constraintBottom_toBottomOf="@id/search_bar" />
+            app:fillColor="#FFFFFFFF"
+            app:indicatorMarginVertical="@dimen/activity_vertical_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_bar"
+            app:pageColor="#655E67"
+            app:radius="4.5dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth=".5dp" />
+
+        <LinearLayout
+            android:id="@+id/mute"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_main_menu"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/blind"
+            app:layout_constraintStart_toStartOf="@id/carouselView"
+            app:layout_constraintTop_toBottomOf="@id/carouselView">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/mute"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blind"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_main_menu"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/deaf"
+            app:layout_constraintStart_toEndOf="@id/mute"
+            app:layout_constraintTop_toBottomOf="@id/carouselView">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/blind"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deaf"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_main_menu"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/carouselView"
+            app:layout_constraintStart_toEndOf="@id/blind"
+            app:layout_constraintTop_toBottomOf="@id/carouselView">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/deaf"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/handStump"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_main_menu"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/legStump"
+            app:layout_constraintStart_toStartOf="@id/carouselView"
+            app:layout_constraintTop_toBottomOf="@id/mute">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/hand_stump"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/legStump"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_main_menu"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/wheelChair"
+            app:layout_constraintStart_toEndOf="@id/handStump"
+            app:layout_constraintTop_toBottomOf="@id/blind">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/leg_stump"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wheelChair"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_main_menu"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@id/carouselView"
+            app:layout_constraintStart_toEndOf="@id/legStump"
+            app:layout_constraintTop_toBottomOf="@id/deaf">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/wheel_chair"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

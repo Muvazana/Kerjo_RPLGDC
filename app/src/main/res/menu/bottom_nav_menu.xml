@@ -2,11 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/history"
-        android:icon="@drawable/ic_history"
-        android:title="History" />
-
-    <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home"
         android:title="Home" />
@@ -15,5 +10,10 @@
         android:id="@+id/inbox"
         android:icon="@drawable/ic_inbox"
         android:title="Inbox" />
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/ic_history"
+        android:title="History" />
 
 </menu>

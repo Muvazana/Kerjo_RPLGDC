@@ -74,17 +74,17 @@
             app:layout_constraintTop_toBottomOf="@id/carouselView">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_inbox" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_mute" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@string/mute"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -102,17 +102,17 @@
             app:layout_constraintTop_toBottomOf="@id/carouselView">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_inbox" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_blind" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@string/blind"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -130,17 +130,17 @@
             app:layout_constraintTop_toBottomOf="@id/carouselView">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_inbox" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_deaf" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@string/deaf"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -158,17 +158,17 @@
             app:layout_constraintTop_toBottomOf="@id/mute">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_inbox" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_hand_stump" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@string/hand_stump"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -186,17 +186,17 @@
             app:layout_constraintTop_toBottomOf="@id/blind">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_inbox" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_leg_stump" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@string/leg_stump"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -214,17 +214,17 @@
             app:layout_constraintTop_toBottomOf="@id/deaf">
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/ic_inbox" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/ic_wheel_chair" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:fontFamily="@font/roboto_regular"
                 android:text="@string/wheel_chair"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>

@@ -9,4 +9,7 @@
     <string name="hand_stump">Hand Stump</string>
     <string name="wheel_chair">Wheel Chair</string>
     <string name="leg_stump">Leg Stump</string>
+    <string name="there_is_no_message_in_your_inbox">There is no message in your inbox</string>
+    <string name="oops">Oops</string>
+    <string name="there_is_no_work_you_are_trying_to_do">There is no work you are trying to do</string>
 </resources>

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kerjo_rplgdc.R
 import com.example.kerjo_rplgdc.fragment.HistoryFragment
 import com.example.kerjo_rplgdc.fragment.HomeFragment
+import com.example.kerjo_rplgdc.fragment.InboxFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.history -> {
                     loadHistoryFragment()
+                }
+                R.id.inbox -> {
+                    loadInboxFragment()
                 }
             }
             true
@@ -42,6 +46,13 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container_layout, HistoryFragment(), HistoryFragment::class.java.simpleName)
+            .commit()
+    }
+
+    private fun loadInboxFragment() {
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.container_layout, InboxFragment(), InboxFragment::class.java.simpleName)
             .commit()
     }
 }
